@@ -1,0 +1,34 @@
+body
+{
+    font-family: Montserrat;
+    color: #461220;
+    padding: 150px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.profile-pic
+{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.content
+{
+    padding: 20px 100px;
+}
