@@ -1,8 +1,14 @@
+html
+{
+    background-color: #ffe3e0;
+}
+
 body
 {
     font-family: Montserrat;
     color: #461220;
-    padding: 150px;
+    margin: 75px 150px;
+    background-color: #fff6f9;
 }
 
 .header
@@ -10,7 +16,9 @@ body
     display: flex;
     justify-content: space-around;
     gap: 50px;
-    margin-bottom: 50px;
+    padding: 50px 100px;
+    color: white;
+    background-color: #461220;
 }
 
 .profile-pic
@@ -23,12 +31,37 @@ body
 
 .navbar
 {
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
     font-weight: bold;
+    background-color: #C29D93;
+    margin-top: 0px;
+}
+
+.navbar a
+{
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    padding: 30px 0px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a:hover
+{
+    color: #ffe3e0;
+    background-color: #9f7774;
+}
+
+.navbar a.active
+{
+    color: #ffe3e0;
+    background-color: #9f7774;
 }
 
 .content
 {
-    padding: 20px 100px;
+    padding: 50px 150px;
 }
