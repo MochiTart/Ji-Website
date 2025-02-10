@@ -1,11 +1,37 @@
 body
 {
     font-family: Montserrat;
+    font-size: 18px;
     color: #461220;
 }
 
-h1, h4
+h3, h4
 {
     margin: 0px;
-    padding: 0px
+    padding: 5px;
+}
+
+ul
+{
+    margin: 2px;
+}
+
+div
+{
+    padding-bottom: 20px;
+}
+
+img
+{
+    width: 100px;
+}
+
+.contacts
+{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 50px;
 }

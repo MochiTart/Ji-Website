@@ -13,24 +13,35 @@ window.addEventListener('DOMContentLoaded', function(e)
 } );
 
 //Navbar color change
+
 document.addEventListener("DOMContentLoaded", function () 
 {
     const navLinks = document.querySelectorAll(".navbar a");
+    const defaultPage = "about.html";
 
-    const activePage = sessionStorage.getItem("activePage");
-    if (activePage) {
-        navLinks.forEach(link => {
-            if (link.getAttribute("href") === activePage) {
+    function setActiveLink(page) 
+    {
+        navLinks.forEach(link => 
+        {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === page) {
                 link.classList.add("active");
             }
         });
     }
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            navLinks.forEach(nav => nav.classList.remove("active"));
-            this.classList.add("active");
-            sessionStorage.setItem("activePage", this.getAttribute("href"));
+    // Reset to "about.html" on refresh
+    sessionStorage.setItem("activePage", defaultPage);
+    setActiveLink(defaultPage);
+
+    // Handle navbar clicks
+    navLinks.forEach(link => 
+    {
+        link.addEventListener("click", function () 
+        {
+            const selectedPage = this.getAttribute("href");
+            sessionStorage.setItem("activePage", selectedPage);
+            setActiveLink(selectedPage);
         });
     });
 });
